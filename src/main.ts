@@ -8,7 +8,8 @@ if (!app) {
 }
 
 const state = {
-  selectedId: palettes[0]?.id ?? ''
+  selectedId: palettes[0]?.id ?? '',
+  sidebarScrollTop: 0
 };
 
 const getSelectedPalette = (): Palette => {
@@ -149,8 +150,18 @@ const render = () => {
     </main>
   `;
 
+  const paletteGrid = app.querySelector<HTMLElement>('.palette-grid');
+  if (paletteGrid) {
+    paletteGrid.scrollTop = state.sidebarScrollTop;
+  }
+
   app.querySelectorAll<HTMLElement>('[data-palette-id]').forEach((button) => {
     button.addEventListener('click', () => {
+      const grid = app.querySelector<HTMLElement>('.palette-grid');
+      if (grid) {
+        state.sidebarScrollTop = grid.scrollTop;
+      }
+
       state.selectedId = button.dataset.paletteId ?? state.selectedId;
       render();
     });
