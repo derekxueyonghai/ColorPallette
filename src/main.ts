@@ -20,6 +20,9 @@ const paletteListMarkup = () =>
   palettes
     .map((palette) => {
       const active = palette.id === state.selectedId ? 'is-active' : '';
+      const brandMarkup = palette.brand
+        ? `<p class="palette-card__brand">${palette.brand}</p>`
+        : '';
       return `
         <button class="palette-card ${active}" data-palette-id="${palette.id}" type="button" aria-pressed="${palette.id === state.selectedId}">
           <div class="palette-card__swatches">
@@ -28,7 +31,7 @@ const paletteListMarkup = () =>
             <span style="background:${palette.colors[2]}"></span>
           </div>
           <div class="palette-card__meta">
-            <p class="palette-card__brand">${palette.brand}</p>
+            ${brandMarkup}
             <h3>${palette.title}</h3>
             <p>${palette.subtitle}</p>
           </div>
@@ -44,10 +47,10 @@ const colorsMarkup = (palette: Palette) =>
   palette.colors
     .map(
       (color, index) => `
-        <button class="color-row" type="button" data-copy-color="${color}" aria-label="复制色值 ${color}">
+        <button class="color-row" type="button" data-copy-color="${color}" aria-label="复制色值 ${color}（${palette.colorNames[index]}）">
           <span class="color-row__index">0${index + 1}</span>
           <span class="color-row__chip" style="background:${color}"></span>
-          <span class="color-row__value">${color}</span>
+          <span class="color-row__value">${color} · ${palette.colorNames[index]}</span>
           <span class="color-row__action">复制</span>
         </button>
       `
@@ -56,14 +59,16 @@ const colorsMarkup = (palette: Palette) =>
 
 const render = () => {
   const palette = getSelectedPalette();
+  const previewBrandMarkup = palette.brand
+    ? `<span class="preview__brand">${palette.brand}</span>`
+    : '';
 
   app.innerHTML = `
     <main class="shell">
       <section class="hero">
         <div class="hero__copy">
           <p class="eyebrow">Color Palette Gallery</p>
-          <h1>从参考图整理出的 9 套复古气质配色。</h1>
-          <p class="hero__desc">这是一个展示型画廊：左侧看当前方案，右侧快速切换九套主题，保留参考图里的海报感、深浅层次和色块节奏。</p>
+          <h1>${palettes.length} 套复古气质配色</h1>
         </div>
         <div class="hero__tools">
           <label class="search-box">
@@ -72,7 +77,6 @@ const render = () => {
           </label>
           <div class="hero__stats">
             <div><strong>${palettes.length}</strong><span>套配色</span></div>
-            <div><strong>${palette.tags.length}</strong><span>当前标签</span></div>
           </div>
         </div>
       </section>
@@ -85,7 +89,7 @@ const render = () => {
               <h2>${palette.title}</h2>
               <p class="preview__subtitle">${palette.subtitle}</p>
             </div>
-            <span class="preview__brand">${palette.brand}</span>
+            ${previewBrandMarkup}
           </div>
 
           <div class="preview__band">

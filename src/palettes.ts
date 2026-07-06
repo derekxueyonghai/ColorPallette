@@ -4,8 +4,9 @@ export type Palette = {
   subtitle: string;
   tags: string[];
   note: string;
-  brand: string;
+  brand?: string;
   colors: [string, string, string];
+  colorNames: [string, string, string];
   surface: string;
   accent: string;
 };
@@ -13,101 +14,101 @@ export type Palette = {
 export const palettes: Palette[] = [
   {
     id: 'emerald',
-    title: 'Emerald',
+    title: 'Emerald 翡翠',
     subtitle: '复古 / 沉静 / 高级',
     tags: ['#复古', '#沉静', '#高级'],
-    note: '偏森林感的冷静配色，适合强调安定和质感。',
-    brand: 'SEA SOUL',
+    note: '冷静、克制的经典复古绿调。',
     colors: ['#D5E3D2', '#003153', '#0A3D2E'],
+    colorNames: ['米白色', '普鲁士蓝', '墨绿'],
     surface: '#10281f',
     accent: '#dbe8d8'
   },
   {
-    id: 'sepia',
-    title: 'Sepia Noon',
-    subtitle: '复古 / 温柔 / 纸感',
-    tags: ['#怀旧', '#纸感', '#柔和'],
-    note: '更接近旧照片和手工海报的温暖底色。',
-    brand: 'ATELIER',
-    colors: ['#E9D8C3', '#9B6B4A', '#5A3B2E'],
-    surface: '#2b1c14',
-    accent: '#f1e0cd'
+    id: 'ruby',
+    title: 'Ruby 红宝',
+    subtitle: '浓郁 / 戏剧 / 怀旧',
+    tags: ['#浓郁', '#戏剧', '#怀旧'],
+    note: '高对比红蓝组合，戏剧感强。',
+    colors: ['#E6DDD1', '#203850', '#7A1F2B'],
+    colorNames: ['米白色', '深靛蓝', '深酒红'],
+    surface: '#24131b',
+    accent: '#f1e8dd'
   },
   {
-    id: 'clay',
-    title: 'Clay Archive',
-    subtitle: '克制 / 手作 / 书卷气',
-    tags: ['#克制', '#手作', '#书卷气'],
-    note: '低饱和的陶土色系，适合带一点艺术馆感。',
-    brand: 'ARCHIVE',
-    colors: ['#E8C9B5', '#8A5A44', '#45322B'],
-    surface: '#271c18',
-    accent: '#f0d8cc'
+    id: 'temple',
+    title: 'Temple 庙街',
+    subtitle: '温暖 / 复古 / 港味',
+    tags: ['#温暖', '#复古', '#港味'],
+    note: '暖橙与墨绿，港风复古气质明显。',
+    colors: ['#E8DED0', '#26473E', '#B86B2E'],
+    colorNames: ['象牙白', '墨绿色', '琥珀橙'],
+    surface: '#2a2118',
+    accent: '#f2e7d8'
   },
   {
-    id: 'olive',
-    title: 'Olive Field',
-    subtitle: '自然 / 安静 / 轻工业',
-    tags: ['#自然', '#安静', '#轻工业'],
-    note: '偏植物和织物气质的平衡方案。',
-    brand: 'ROOTS',
-    colors: ['#DCE0C8', '#7A8553', '#334D3B'],
-    surface: '#1f2a23',
-    accent: '#e8eadc'
+    id: 'plum',
+    title: 'Plum 梅子',
+    subtitle: '神秘 / 优雅 / 文艺',
+    tags: ['#神秘', '#优雅', '#文艺'],
+    note: '紫调与深海蓝组合，安静且文艺。',
+    colors: ['#E8E2D7', '#233E5A', '#69456B'],
+    colorNames: ['燕麦白', '深海蓝', '柿子紫'],
+    surface: '#201a22',
+    accent: '#efe8df'
   },
   {
-    id: 'cocoa',
-    title: 'Cocoa Ground',
-    subtitle: '稳重 / 深色 / 有分量',
-    tags: ['#稳重', '#深色', '#分量'],
-    note: '更适合做标题型展示，层次非常明确。',
-    brand: 'GROUND',
-    colors: ['#E5CDB8', '#7E5539', '#37231D'],
-    surface: '#201612',
-    accent: '#f1ddd0'
+    id: 'coral',
+    title: 'Coral 珊瑚',
+    subtitle: '鲜活 / 年轻 / 复古',
+    tags: ['#鲜活', '#年轻', '#复古'],
+    note: '更鲜活的红绿对比，适合年轻表达。',
+    colors: ['#EFE5D7', '#28504D', '#C85B4A'],
+    colorNames: ['奶油白', '深松石绿', '珊瑚红'],
+    surface: '#2a201b',
+    accent: '#f4ebde'
   },
   {
-    id: 'ink',
-    title: 'Ink Studio',
-    subtitle: '冷静 / 文艺 / 版式感',
-    tags: ['#文艺', '#版式感', '#冷静'],
-    note: '加入更强的蓝黑调，强调现代编辑感。',
-    brand: 'STUDIO',
-    colors: ['#D7E0E2', '#4E6770', '#16313D'],
-    surface: '#111f25',
-    accent: '#e4eef0'
+    id: 'harbor',
+    title: 'Harbor 港口',
+    subtitle: '理性 / 国际 / 都市',
+    tags: ['#理性', '#国际', '#都市'],
+    note: '偏理性的都市蓝灰方案，适合信息型界面。',
+    colors: ['#E3E2DB', '#2F3137', '#2A4C8B'],
+    colorNames: ['云雾白', '深墨灰', '钴蓝'],
+    surface: '#1e222b',
+    accent: '#ecebe4'
   },
   {
-    id: 'sand',
-    title: 'Sand Loft',
-    subtitle: '轻盈 / 中性色 / 生活方式',
-    tags: ['#轻盈', '#中性色', '#生活方式'],
-    note: '适合更明亮、空间感更大的展示场景。',
-    brand: 'LOFT',
-    colors: ['#F1E8D9', '#B28F6B', '#70604F'],
-    surface: '#31261f',
-    accent: '#f7f0e5'
+    id: 'rose',
+    title: 'Rose 蔷薇',
+    subtitle: '浪漫 / 复古 / 精致',
+    tags: ['#浪漫', '#复古', '#精致'],
+    note: '柔和蔷薇调，更偏精致与浪漫。',
+    colors: ['#EEDFD4', '#6F4A52', '#A55C66'],
+    colorNames: ['米杏白', '玫瑰褐', '蔷薇红'],
+    surface: '#2a2024',
+    accent: '#f5e8df'
   },
   {
-    id: 'moss',
-    title: 'Moss Studio',
-    subtitle: '植物感 / 安稳 / 低饱和',
-    tags: ['#植物感', '#安稳', '#低饱和'],
-    note: '更偏大地与苔藓的组合，适合强调自然。',
-    brand: 'MOSS',
-    colors: ['#DCE5D4', '#8DA06D', '#496045'],
-    surface: '#213126',
-    accent: '#edf3e7'
+    id: 'teal',
+    title: 'Teal 青碧',
+    subtitle: '冷静 / 高级 / 东方',
+    tags: ['#冷静', '#高级', '#东方'],
+    note: '东方语境下的青碧与深咖灰，更耐看。',
+    colors: ['#E3E5DD', '#403A38', '#0D6B67'],
+    colorNames: ['月白色', '深咖灰', '青碧色'],
+    surface: '#22211f',
+    accent: '#eceee6'
   },
   {
-    id: 'stone',
-    title: 'Stone Quiet',
-    subtitle: '静物 / 克制 / 展陈感',
-    tags: ['#静物', '#克制', '#展陈感'],
-    note: '最接近展览说明牌的气质，适合信息感最强的卡片。',
-    brand: 'GALLERY',
-    colors: ['#E6E1D8', '#9A9389', '#4C4740'],
-    surface: '#26211c',
-    accent: '#f4f0ea'
+    id: 'mustard',
+    title: 'Mustard 芥末',
+    subtitle: '怀旧 / 浓郁 / 艺术',
+    tags: ['#怀旧', '#浓郁', '#艺术'],
+    note: '芥末黄与墨蓝的组合，艺术感强。',
+    colors: ['#E7E0D5', '#263D5A', '#A88B2C'],
+    colorNames: ['亚麻白', '墨蓝色', '芥末黄'],
+    surface: '#2a261b',
+    accent: '#f0eadf'
   }
 ];
