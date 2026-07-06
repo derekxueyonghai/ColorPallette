@@ -348,15 +348,15 @@ button {
 
 .palette-grid {
   display: grid;
-  gap: 0.85rem;
+  gap: 1.15rem;
 }
 
 .palette-card {
   display: grid;
-  grid-template-columns: 118px minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
   width: 100%;
-  padding: 0.85rem;
+  padding: 1rem;
   border-radius: 24px;
   border: 1px solid rgba(88, 67, 50, 0.12);
   background: rgba(255, 251, 244, 0.8);
@@ -376,7 +376,7 @@ button {
   grid-template-columns: 1fr 1fr 1fr;
   border-radius: 18px;
   overflow: hidden;
-  min-height: 112px;
+  min-height: 148px;
 }
 
 .palette-card__swatches span {
@@ -385,8 +385,8 @@ button {
 
 .palette-card__meta {
   display: grid;
-  align-content: center;
-  gap: 0.35rem;
+  align-content: start;
+  gap: 0.45rem;
 }
 
 .palette-card__brand {
@@ -398,11 +398,12 @@ button {
 
 .palette-card h3 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
 }
 
 .palette-card p:last-child {
-  line-height: 1.5;
+  line-height: 1.58;
+  font-size: 0.98rem;
   color: rgba(68, 52, 39, 0.76);
 }
 
@@ -451,12 +452,8 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .palette-card {
-    grid-template-columns: 1fr;
-  }
-
   .palette-card__swatches {
-    min-height: 96px;
+    min-height: 120px;
   }
 
   .color-row {
