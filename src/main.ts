@@ -20,20 +20,41 @@ const paletteListMarkup = () =>
   palettes
     .map((palette) => {
       const active = palette.id === state.selectedId ? 'is-active' : '';
-      const brandMarkup = palette.brand
-        ? `<p class="palette-card__brand">${palette.brand}</p>`
-        : '';
+      const [titleEn = palette.title, titleCn = ''] = palette.title.split(' ');
+      const tagsLine = palette.tags.slice(0, 3).join(' ');
       return `
         <button class="palette-card ${active}" data-palette-id="${palette.id}" type="button" aria-pressed="${palette.id === state.selectedId}">
-          <div class="palette-card__swatches">
-            <span style="background:${palette.colors[0]}"></span>
-            <span style="background:${palette.colors[1]}"></span>
-            <span style="background:${palette.colors[2]}"></span>
-          </div>
-          <div class="palette-card__meta">
-            ${brandMarkup}
-            <h3>${palette.title}</h3>
-            <p>${palette.subtitle}</p>
+          <div class="palette-card__frame">
+            <div class="palette-card__swatches">
+              <section class="palette-card__swatch palette-card__swatch--top" style="--swatch-color:${palette.colors[0]};">
+                <div class="palette-card__hero">
+                  <h3>
+                    <span>${titleEn}</span>
+                    <small>${titleCn}</small>
+                  </h3>
+                  <p class="palette-card__subtitle">${palette.subtitle}</p>
+                </div>
+                <p class="palette-card__code">
+                  <strong>${palette.colors[0]}</strong>
+                  <em>${palette.colorNames[0]}</em>
+                </p>
+              </section>
+
+              <section class="palette-card__swatch palette-card__swatch--mid" style="--swatch-color:${palette.colors[1]};">
+                <p class="palette-card__tags">${tagsLine}</p>
+                <p class="palette-card__code">
+                  <strong>${palette.colors[1]}</strong>
+                  <em>${palette.colorNames[1]}</em>
+                </p>
+              </section>
+
+              <section class="palette-card__swatch palette-card__swatch--bottom" style="--swatch-color:${palette.colors[2]};">
+                <p class="palette-card__code">
+                  <strong>${palette.colors[2]}</strong>
+                  <em>${palette.colorNames[2]}</em>
+                </p>
+              </section>
+            </div>
           </div>
         </button>
       `;
