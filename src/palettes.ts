@@ -110,5 +110,27 @@ export const palettes: Palette[] = [
     colorNames: ['亚麻白', '墨蓝色', '芥末黄'],
     surface: '#2a261b',
     accent: '#f0eadf'
+  },
+  {
+    id: 'lye',
+    title: 'Lye 碱液',
+    subtitle: '素雅 / 自然 / 安静',
+    tags: ['#素雅', '#自然', '#安静'],
+    note: '低饱和的灰绿与深色组合，克制且耐看。',
+    colors: ['#F0F0EC', '#B8C49A', '#2A2E2C'],
+    colorNames: ['米白', '若竹', '漆黑'],
+    surface: '#1d2220',
+    accent: '#edf0e9'
+  },
+  {
+    id: 'soot',
+    title: 'Soot 煤烟',
+    subtitle: '暗调 / 冷静 / 克制',
+    tags: ['#暗调', '#冷静', '#克制'],
+    note: '紫灰中性色阶，适合沉稳和内容导向的界面。',
+    colors: ['#D8C8D8', '#9A8C9A', '#2A282A'],
+    colorNames: ['淡紫', '菖蒲', '煤烟'],
+    surface: '#1f1c20',
+    accent: '#e7dfe8'
   }
 ];
