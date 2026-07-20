@@ -132,5 +132,93 @@ export const palettes: Palette[] = [
     colorNames: ['淡紫', '菖蒲', '煤烟'],
     surface: '#1f1c20',
     accent: '#e7dfe8'
+  },
+  {
+    id: 'techbluegray',
+    title: 'TechBlueGray 科技蓝灰',
+    subtitle: '科技 / 理性 / 都市',
+    tags: ['#科技', '#理性', '#都市'],
+    note: '科技感强烈的冷调蓝灰，专业可信。',
+    colors: ['#38BDF8', '#334155', '#0F172A'],
+    colorNames: ['亮蓝', '蓝灰', '深蓝黑'],
+    surface: '#0a0f1a',
+    accent: '#e0f2fe'
+  },
+  {
+    id: 'minimalblackwhite',
+    title: 'MinimalBlackWhite 极简黑白',
+    subtitle: '极简 / 高级 / 品牌',
+    tags: ['#极简', '#高级', '#品牌'],
+    note: '至简至美的黑白中灰，高级质感十足。',
+    colors: ['#F5F5F5', '#A3A3A3', '#0A0A0A'],
+    colorNames: ['米白', '中灰', '纯黑'],
+    surface: '#050505',
+    accent: '#fafafa'
+  },
+  {
+    id: 'coolbluegreen',
+    title: 'CoolBlueGreen 冷调蓝绿',
+    subtitle: '环保 / 健康 / 自然',
+    tags: ['#环保', '#健康', '#自然'],
+    note: '清新生态的绿调，充满自然活力。',
+    colors: ['#D8F3DC', '#40916C', '#1B4332'],
+    colorNames: ['浅绿', '青绿', '深绿'],
+    surface: '#0f2818',
+    accent: '#ecfdf5'
+  },
+  {
+    id: 'brandredblack',
+    title: 'BrandRedBlack 品牌红黑',
+    subtitle: '运动 / 品牌 / 激情',
+    tags: ['#运动', '#品牌', '#激情'],
+    note: '强势冲击的红黑组合，充满活力与张力。',
+    colors: ['#E5E5E5', '#1F1F1F', '#B91C1C'],
+    colorNames: ['浅灰', '深灰', '深红'],
+    surface: '#0a0a0a',
+    accent: '#fafafa'
+  },
+  {
+    id: 'texturedbrown',
+    title: 'TexturedBrown 质感棕色',
+    subtitle: '质感 / 家居 / 生活',
+    tags: ['#质感', '#家居', '#生活'],
+    note: '温暖质朴的棕调，生活气息浓郁。',
+    colors: ['#F2E8CF', '#A68A64', '#3E2C23'],
+    colorNames: ['米白', '浅棕', '深棕'],
+    surface: '#2a1f17',
+    accent: '#faf8f3'
+  },
+  {
+    id: 'premiumgraypurple',
+    title: 'PremiumGrayPurple 高级灰紫',
+    subtitle: '设计 / 艺术 / 女性',
+    tags: ['#设计', '#艺术', '#女性'],
+    note: '高级优雅的灰紫调，艺术感十足。',
+    colors: ['#EDF2F4', '#8D99AE', '#2B2D42'],
+    colorNames: ['浅灰白', '灰蓝', '深灰蓝'],
+    surface: '#16171e',
+    accent: '#f5f7fa'
+  },
+  {
+    id: 'businessblue',
+    title: 'BusinessBlue 商务蓝系',
+    subtitle: '企业 / 金融 / 咨询',
+    tags: ['#企业', '#金融', '#咨询'],
+    note: '专业可信的蓝调，商务正式感强。',
+    colors: ['#F1FAEE', '#457B9D', '#1D3557'],
+    colorNames: ['浅白绿', '蓝色', '深蓝'],
+    surface: '#0f1b2e',
+    accent: '#f8fcf9'
+  },
+  {
+    id: 'warmbeigegray',
+    title: 'WarmBeigeGray 暖调米灰',
+    subtitle: '家居 / 室内 / 生活',
+    tags: ['#家居', '#室内', '#生活'],
+    note: '温暖舒适的米灰调，居家氛围浓厚。',
+    colors: ['#F5F3EF', '#B7B7A4', '#4A4A48'],
+    colorNames: ['奶白', '灰米', '深灰'],
+    surface: '#2a2a28',
+    accent: '#faf9f7'
   }
 ];
